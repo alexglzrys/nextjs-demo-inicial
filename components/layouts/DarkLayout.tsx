@@ -1,7 +1,9 @@
 // Layout que puede ser usado de forma anidada junto con otros Layouts
 // Sirve como composición al diseño original del Layout Principal
 
-export const DarkLayout = ({ children }) => {
+import { FC, PropsWithChildren } from "react";
+
+export const DarkLayout: FC<PropsWithChildren> = ({ children }) => {
     return (
       <div
         style={{

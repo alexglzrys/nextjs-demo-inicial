@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "@/styles/About.module.css";
-import { MainLayout } from "@/components/layouts/MainLayout";
-import { DarkLayout } from "@/components/layouts/DarkLayout";
+import styles from "../../styles/About.module.css";
+import { MainLayout } from "../../components/layouts/MainLayout";
+import { DarkLayout } from "../..//components/layouts/DarkLayout";
+
+// Migrar proyecto de JS a TypeScript
+// https://nextjs.org/learn/excel/typescript/create-tsconfig
 
 export default function ContactPage() {
   return (
@@ -30,7 +33,7 @@ export default function ContactPage() {
 
 
 // Anidar multiples Layouts en esta página
-ContactPage.getLayout = function getLayout(page) {
+ContactPage.getLayout = function getLayout(page: JSX.Element) {
     return (
       <MainLayout>
         <DarkLayout>{page}</DarkLayout>

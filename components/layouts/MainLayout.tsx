@@ -1,10 +1,11 @@
+import { FC, PropsWithChildren } from "react";
 import { Navbar } from "../Navbar";
 import styles from './MainLayout.module.css'
 
 // Layout ptincipal de la aplicación
 // Se colocan todos los elementos que se repiten en todas las páginas que extienden de este Layout
 
-export const MainLayout = ({ children }) => {
+export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       {/* Invocar un componente personalizado de React */}

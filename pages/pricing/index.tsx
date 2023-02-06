@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import { MainLayout } from "@/components/layouts/MainLayout";
-import styles from "@/styles/About.module.css";
+import { MainLayout } from "../../components/layouts/MainLayout";
+import styles from "../../styles/About.module.css";
 
 export default function PricingPage() {
   return (
