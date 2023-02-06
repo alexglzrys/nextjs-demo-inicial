@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ActiveLink } from "./ActiveLink";
 import styles from "./Navbar.module.css";
 
 // Los componentes tradicionales de React, pueden o no ser exportarse por defecto
@@ -9,9 +9,9 @@ export const Navbar = () => {
   return (
     <nav className={styles.Navbar}>
       <div className={styles["Navbar-container"]}>
-        <Link href="/" className={styles.Link}>Home</Link>
-        <Link href="/about" className={styles.Link}>About</Link>
-        <Link href="/contact" className={styles.Link}>Contact</Link>
+        <ActiveLink href="/" text="Home" />
+        <ActiveLink href="/about" text="About" />
+        <ActiveLink href="/contact" text="Contact" />
       </div>
     </nav>
   );

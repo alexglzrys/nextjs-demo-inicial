@@ -10,7 +10,7 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-.Link {
+.Navbar a {
     display: inline-block;
     padding: .3rem .5rem;
     color: #fff;
