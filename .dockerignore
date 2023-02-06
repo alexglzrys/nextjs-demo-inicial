@@ -1,0 +1,9 @@
+# Archivos y directorios (del proyecto) que se deben ignorar al momento de pasar la aplicación a una imagen de Docker
+
+Dockerfile
+.dockerignore
+node_modules
+.next
+README.md
+npm-debug.log
+

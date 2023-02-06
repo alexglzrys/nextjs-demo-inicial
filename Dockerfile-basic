@@ -1,0 +1,33 @@
+# Comandos para generar la imagen de Docker para nuestro proyecto de NextJS
+
+# Construir el proyecto a partir de una imagen de Node identificada con el tag 16-alpine
+FROM node:16-alpine
+
+# Crear una carpeta
+RUN mkdir -p /app
+
+# Especificar el directorio de trabajo
+WORKDIR /app
+
+# Copiar el archivo packeage.json al directorio de trabajo
+COPY package.json /app
+
+# Por si se queja al momento de generar la imagen (por temas de actualización)
+RUN npm install -g npm@9.4.1
+
+# Correr el comando para instalar todas las dependencias
+RUN npm install
+
+# Copiar todo el proyecto a el directorio de trabajo
+COPY . /app
+
+# Generar el la versión de producción
+RUN npm run build
+
+## - RECOMENDABLE CREAR UN USUARIO Y ASIGNARLE LOS PERMISOS NECESARIOS Y ASOCIAR NUESTRA APLICACION CON ESE USUARIO
+
+# Exponer el puerto 3000 (hacerlo público)
+EXPOSE 3000
+
+# Correr nuestra aplicación
+CMD ["npm", "start"]
