@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 /**
@@ -19,7 +20,12 @@ export default function HomePage() {
       </Head>
       <main className={styles.main}>
          <h2 className={styles.title}>Página <span className={styles.page}>Home</span></h2>
-         <p className={styles.description}>Visitar la página de <a href="/about" className={styles.link}>About</a></p>
+          {/* 
+          NextJS hace uso de static side rendering en la mayoría de los escenarios
+          para ello es importante hacer uso de su componente Link, para que cargue en memoria el contenido de las páginas asociadas con el enlace
+          Se puede seguir usando <a>, pero esto hace un full refresh (request) de la página - (esto es recomendado para pàginas externas)
+         */}
+         <p className={styles.description}>Visitar la página de <Link href="/about" className={styles.link}>About</Link></p>
       </main>
     </>
   )

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/About.module.css";
 
 export default function AboutPage() {
@@ -23,9 +24,9 @@ export default function AboutPage() {
         </h2>
         <p className={styles.description}>
           Visitar la página de{" "}
-          <a href="/" className={styles.link}>
+          <Link href="/" className={styles.link}>
             Home
-          </a>
+          </Link>
         </p>
       </main>
     </>
