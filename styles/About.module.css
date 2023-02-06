@@ -1,15 +1,5 @@
 /* Modulo de CSS para los estilos del componente de página AboutPage */
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6rem;
-    min-height: 100vh;
-    background: rgb(246,246,246);
-    background: linear-gradient(90deg, rgba(246,246,246,1) 0%, rgba(190,190,190,1) 100%);
-}
 .title {
     margin-bottom: 1rem;
     font-size: 3rem;

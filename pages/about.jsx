@@ -1,3 +1,4 @@
+import { MainLayout } from "@/components/layouts/MainLayout";
 import { Navbar } from "@/components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import styles from "../styles/About.module.css";
 
 export default function AboutPage() {
   return (
-    <>
+    <MainLayout>
       {/* Componente para colocar metainformación en la cabecera de la página HTML */}
       <Head>
         <title>Acerca de</title>
@@ -31,6 +32,6 @@ export default function AboutPage() {
           </Link>
         </p>
       </main>
-    </>
+    </MainLayout>
   );
 }
