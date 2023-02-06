@@ -4,5 +4,10 @@ import '@/styles/globals.css'
 // * Especialmente útil para declarar estilos y contextos que deben estar disponibles de forma global en la aplicacion
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    // Utilizar el layout definido a nivel de página si está definido (Multiples Layouts)
+    const getLayout = Component.getLayout || ((page) => page);
+
+    // return <Component {...pageProps} />
+    
+    return getLayout(<Component {...pageProps} />)
 }

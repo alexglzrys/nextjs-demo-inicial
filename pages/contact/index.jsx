@@ -2,10 +2,11 @@ import Link from "next/link";
 import Head from "next/head";
 import styles from "@/styles/About.module.css";
 import { MainLayout } from "@/components/layouts/MainLayout";
+import { DarkLayout } from "@/components/layouts/DarkLayout";
 
 export default function ContactPage() {
   return (
-    <MainLayout>
+    <>
       {/* Componente para colocar metainformación en la cabecera de la página HTML */}
       <Head>
         <title>Contáctanos</title>
@@ -23,6 +24,17 @@ export default function ContactPage() {
           Home
         </Link>
       </p>
-    </MainLayout>
+    </>
   );
 }
+
+
+// Anidar multiples Layouts en esta página
+ContactPage.getLayout = function getLayout(page) {
+    return (
+      <MainLayout>
+        <DarkLayout>{page}</DarkLayout>
+      </MainLayout>
+    );
+  };
+  
