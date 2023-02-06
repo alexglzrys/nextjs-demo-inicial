@@ -1,0 +1,23 @@
+/* Modulo de CSS para los estilos del componente de página AboutPage */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+}
+.title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+.page {
+    color: tomato;
+}
+.description {
+    font-size: 1.1rem;
+}
+.link {
+    color: royalblue;
+}
