@@ -7,6 +7,14 @@ export default function AboutPage() {
       {/* Componente para colocar metainformación en la cabecera de la página HTML */}
       <Head>
         <title>Acerca de</title>
+        <meta
+          name="description"
+          content="Muestra información acerca del contenido de este sitio Web"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="nextjs, react, javascript" />
+        {/* Contenido publico y estático (sin procesar) se coloca dentro de la carpeta public - su acceso es a través de / */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Contenido principal de la página About */}
       <main className={styles.main}>
